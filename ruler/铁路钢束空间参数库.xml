@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<railway_tendon_space_database version="1.0" unit="mm" design_scope="railway">
+  <source workbook="连续梁设计参数（2020锚具书）08.10(1).xlsx" sheet="钢束空间(铁路) 加大波纹管内径" anchor_design_values="新设计" />
+  <field_definitions>
+    <field name="metal_corrugated_duct_inner_diameter" unit="mm" description="金属波纹管内径" />
+    <field name="corrugated_duct_top_web_edge_distance" unit="mm" description="顶腹板波纹管边距" />
+    <field name="corrugated_duct_bottom_slab_edge_distance" unit="mm" description="底板波纹管边距" />
+    <field name="pass_to_pass_center_spacing" unit="mm" description="一般位置钢束与钢束的最小中心距" />
+    <field name="jack_top_slab_control_edge_distance" unit="mm" description="张拉千斤顶YCWB顶板控制边距" />
+    <field name="jack_bottom_slab_control_edge_distance" unit="mm" description="张拉千斤顶YCWB底板控制边距" />
+    <field name="anchor_to_anchor_center_spacing" unit="mm" description="锚固位置与锚固位置的最小中心距" />
+    <field name="anchor_top_bottom_slab_edge_distance" unit="mm" description="锚固位置至顶板或底板的控制边距" />
+    <field name="anchor_web_edge_distance" unit="mm" description="锚固位置至腹板的控制边距" />
+    <field name="anchor_to_pass_center_spacing" unit="mm" description="锚固束与一般贯通钢束的最小中心距" />
+  </field_definitions>
+  <tendon_specifications>
+    <tendon_specification id="M15-7" bundle_spec="7-φ15.2" anchor_model="OVM.M15-7" strand_count="7" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="70" top_web_edge_mm="115.5" bottom_slab_edge_mm="98.5" />
+      <spacing pass_to_pass_center_mm="138.6" anchor_to_anchor_center_mm="264" anchor_to_pass_center_mm="170.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="190" bottom_slab_control_edge_mm="162" />
+      <anchor_edge top_bottom_slab_mm="167" web_mm="204" />
+    </tendon_specification>
+    <tendon_specification id="M15-8" bundle_spec="8-φ15.2" anchor_model="OVM.M15-8" strand_count="8" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="80" top_web_edge_mm="130.5" bottom_slab_edge_mm="103.5" />
+      <spacing pass_to_pass_center_mm="156.6" anchor_to_anchor_center_mm="283" anchor_to_pass_center_mm="185" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="210" bottom_slab_control_edge_mm="186" />
+      <anchor_edge top_bottom_slab_mm="176.5" web_mm="213.5" />
+    </tendon_specification>
+    <tendon_specification id="M15-9" bundle_spec="9-φ15.2" anchor_model="OVM.M15-9" strand_count="9" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="85" top_web_edge_mm="138" bottom_slab_edge_mm="106" />
+      <spacing pass_to_pass_center_mm="165.6" anchor_to_anchor_center_mm="293" anchor_to_pass_center_mm="192.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="210" bottom_slab_control_edge_mm="186" />
+      <anchor_edge top_bottom_slab_mm="181.5" web_mm="218.5" />
+    </tendon_specification>
+    <tendon_specification id="M15-10" bundle_spec="10-φ15.2" anchor_model="OVM.M15-10" strand_count="10" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="90" top_web_edge_mm="145.5" bottom_slab_edge_mm="108.5" />
+      <spacing pass_to_pass_center_mm="174.6" anchor_to_anchor_center_mm="293" anchor_to_pass_center_mm="195" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="220" bottom_slab_control_edge_mm="202" />
+      <anchor_edge top_bottom_slab_mm="181.5" web_mm="218.5" />
+    </tendon_specification>
+    <tendon_specification id="M15-11" bundle_spec="11-φ15.2" anchor_model="OVM.M15-11" strand_count="11" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="90" top_web_edge_mm="145.5" bottom_slab_edge_mm="108.5" />
+      <spacing pass_to_pass_center_mm="174.6" anchor_to_anchor_center_mm="318" anchor_to_pass_center_mm="207.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="240" bottom_slab_control_edge_mm="217" />
+      <anchor_edge top_bottom_slab_mm="194" web_mm="231" />
+    </tendon_specification>
+    <tendon_specification id="M15-12" bundle_spec="12-φ15.2" anchor_model="OVM.M15-12" strand_count="12" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="90" top_web_edge_mm="145.5" bottom_slab_edge_mm="108.5" />
+      <spacing pass_to_pass_center_mm="174.6" anchor_to_anchor_center_mm="318" anchor_to_pass_center_mm="207.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="240" bottom_slab_control_edge_mm="217" />
+      <anchor_edge top_bottom_slab_mm="194" web_mm="231" />
+    </tendon_specification>
+    <tendon_specification id="M15-13" bundle_spec="13-φ15.2" anchor_model="OVM.M15-13" strand_count="13" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="95" top_web_edge_mm="153" bottom_slab_edge_mm="111" />
+      <spacing pass_to_pass_center_mm="183.6" anchor_to_anchor_center_mm="328" anchor_to_pass_center_mm="215" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="240" bottom_slab_control_edge_mm="217" />
+      <anchor_edge top_bottom_slab_mm="199" web_mm="236" />
+    </tendon_specification>
+    <tendon_specification id="M15-14" bundle_spec="14-φ15.2" anchor_model="OVM.M15-14" strand_count="14" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="100" top_web_edge_mm="160.5" bottom_slab_edge_mm="113.5" />
+      <spacing pass_to_pass_center_mm="192.6" anchor_to_anchor_center_mm="353" anchor_to_pass_center_mm="230" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="255" bottom_slab_control_edge_mm="235" />
+      <anchor_edge top_bottom_slab_mm="211.5" web_mm="248.5" />
+    </tendon_specification>
+    <tendon_specification id="M15-15" bundle_spec="15-φ15.2" anchor_model="OVM.M15-15" strand_count="15" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="100" top_web_edge_mm="160.5" bottom_slab_edge_mm="113.5" />
+      <spacing pass_to_pass_center_mm="192.6" anchor_to_anchor_center_mm="357" anchor_to_pass_center_mm="232" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="255" bottom_slab_control_edge_mm="235" />
+      <anchor_edge top_bottom_slab_mm="213.5" web_mm="250.5" />
+    </tendon_specification>
+    <tendon_specification id="M15-16" bundle_spec="16-φ15.2" anchor_model="OVM.M15-16" strand_count="16" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="110" top_web_edge_mm="175.5" bottom_slab_edge_mm="118.5" />
+      <spacing pass_to_pass_center_mm="210.6" anchor_to_anchor_center_mm="382" anchor_to_pass_center_mm="249.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="255" bottom_slab_control_edge_mm="235" />
+      <anchor_edge top_bottom_slab_mm="226" web_mm="263" />
+    </tendon_specification>
+    <tendon_specification id="M15-17" bundle_spec="17-φ15.2" anchor_model="OVM.M15-17" strand_count="17" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="110" top_web_edge_mm="175.5" bottom_slab_edge_mm="118.5" />
+      <spacing pass_to_pass_center_mm="210.6" anchor_to_anchor_center_mm="382" anchor_to_pass_center_mm="249.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="265" bottom_slab_control_edge_mm="248" />
+      <anchor_edge top_bottom_slab_mm="226" web_mm="263" />
+    </tendon_specification>
+    <tendon_specification id="M15-18" bundle_spec="18-φ15.2" anchor_model="OVM.M15-18" strand_count="18" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="120" top_web_edge_mm="190.5" bottom_slab_edge_mm="123.5" />
+      <spacing pass_to_pass_center_mm="228.6" anchor_to_anchor_center_mm="402" anchor_to_pass_center_mm="264.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="295" bottom_slab_control_edge_mm="277" />
+      <anchor_edge top_bottom_slab_mm="236" web_mm="273" />
+    </tendon_specification>
+    <tendon_specification id="M15-19" bundle_spec="19-φ15.2" anchor_model="OVM.M15-19" strand_count="19" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="120" top_web_edge_mm="190.5" bottom_slab_edge_mm="123.5" />
+      <spacing pass_to_pass_center_mm="228.6" anchor_to_anchor_center_mm="402" anchor_to_pass_center_mm="264.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="295" bottom_slab_control_edge_mm="277" />
+      <anchor_edge top_bottom_slab_mm="236" web_mm="273" />
+    </tendon_specification>
+    <tendon_specification id="M15-20" bundle_spec="20-φ15.2" anchor_model="OVM.M15-20" strand_count="20" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="120" top_web_edge_mm="190.5" bottom_slab_edge_mm="123.5" />
+      <spacing pass_to_pass_center_mm="228.6" anchor_to_anchor_center_mm="422" anchor_to_pass_center_mm="274.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="295" bottom_slab_control_edge_mm="277" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-21" bundle_spec="21-φ15.2" anchor_model="OVM.M15-21" strand_count="21" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="120" top_web_edge_mm="190.5" bottom_slab_edge_mm="123.5" />
+      <spacing pass_to_pass_center_mm="228.6" anchor_to_anchor_center_mm="422" anchor_to_pass_center_mm="274.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-22" bundle_spec="22-φ15.2" anchor_model="OVM.M15-22" strand_count="22" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="120" top_web_edge_mm="190.5" bottom_slab_edge_mm="123.5" />
+      <spacing pass_to_pass_center_mm="228.6" anchor_to_anchor_center_mm="422" anchor_to_pass_center_mm="274.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-23" bundle_spec="23-φ15.2" anchor_model="OVM.M15-23" strand_count="23" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="125" top_web_edge_mm="198" bottom_slab_edge_mm="126" />
+      <spacing pass_to_pass_center_mm="237.6" anchor_to_anchor_center_mm="427" anchor_to_pass_center_mm="277" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-24" bundle_spec="24-φ15.2" anchor_model="OVM.M15-24" strand_count="24" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="125" top_web_edge_mm="198" bottom_slab_edge_mm="126" />
+      <spacing pass_to_pass_center_mm="237.6" anchor_to_anchor_center_mm="439" anchor_to_pass_center_mm="277" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-25" bundle_spec="25-φ15.2" anchor_model="OVM.M15-25" strand_count="25" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="125" top_web_edge_mm="198" bottom_slab_edge_mm="126" />
+      <spacing pass_to_pass_center_mm="237.6" anchor_to_anchor_center_mm="450" anchor_to_pass_center_mm="277" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-26" bundle_spec="26-φ15.2" anchor_model="OVM.M15-26" strand_count="26" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="130" top_web_edge_mm="205.5" bottom_slab_edge_mm="128.5" />
+      <spacing pass_to_pass_center_mm="246.6" anchor_to_anchor_center_mm="455" anchor_to_pass_center_mm="279.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+    <tendon_specification id="M15-27" bundle_spec="27-φ15.2" anchor_model="OVM.M15-27" strand_count="27" strand_diameter_mm="15.2">
+      <duct type="metal_corrugated" inner_diameter_mm="130" top_web_edge_mm="205.5" bottom_slab_edge_mm="128.5" />
+      <spacing pass_to_pass_center_mm="246.6" anchor_to_anchor_center_mm="460" anchor_to_pass_center_mm="279.5" />
+      <tensioning_jack model="YCWB" top_slab_control_edge_mm="310" bottom_slab_control_edge_mm="302" />
+      <anchor_edge top_bottom_slab_mm="246" web_mm="283" />
+    </tendon_specification>
+  </tendon_specifications>
+</railway_tendon_space_database>

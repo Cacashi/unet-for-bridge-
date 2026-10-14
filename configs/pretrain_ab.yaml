@@ -1,0 +1,13 @@
+base: base.yaml
+train:
+  stage: pretrain_ab
+  domains: [A, B]
+  domain_balanced_sampling: true
+  epochs: 60
+  learning_rate: 0.0003
+  checkpoint: null
+  output_dir: outputs/pretrain_ab_domain_balanced
+  freeze_encoder_epochs: 0
+data:
+  input_dir: half-section/input1
+  output_dir: half-section/output1

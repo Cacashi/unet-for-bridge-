@@ -1,0 +1,120 @@
+seed: 20261008
+
+data:
+  root: .
+  workbook: data_train.xlsx
+  worksheet: data_train
+  input_dir: half-section/input1
+  output_dir: half-section/output1
+  manifest: artifacts/manifest.jsonl
+  splits: artifacts/splits.json
+  feature_stats: artifacts/feature_stats.json
+  mm_per_pixel: 5.0
+  rule_mode: pass_only
+  enable_anchor_constraints: false
+  tendon_schedule: null
+  image_size: [1024, 512]
+  output_stride: 4
+  label_scope: half
+  design_count_scope: full
+  radius_source: mask_component
+  group_column: id
+  split_ratios: [0.70, 0.15, 0.15]
+  num_workers: 2
+  prefetch_factor: 4
+  exclude_invalid_geometry: true
+  excluded_samples:
+    - "0_7_-51"
+  deduplicate_content: true
+  augmentation:
+    enabled: true
+    scale_range: [0.98, 1.02]
+    translate_px: 4.0
+    rotate_deg: 1.0
+
+features:
+  onehot_length: 21
+  continuous:
+    - half_top_count
+    - half_web_count
+    - half_bottom_count
+    - section_num
+    - distance
+    - side_distance_ratio
+  onehot:
+    - top_onehot
+    - web_onehot
+    - bottom_onehot
+
+model:
+  input_channels: 2
+  base_channels: 8
+  bottleneck_channels: 256
+  tabular_dim: 69
+  mlp_hidden: 64
+  dropout: 0.20
+  output_stride: 4
+
+loss:
+  heatmap_weight: 1.0
+  offset_weight: 1.0
+  mask_weight: 0.5
+  radius_weight: 0.1
+  density_weight: 0.1
+  count_weight: 0.1
+  geometry_weight: 0.5
+  region_weight: 0.2
+
+train:
+  stage: pretrain_b
+  epochs: 100
+  device: cuda
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  max_grad_norm: 1.0
+  learning_rate: 0.0003
+  weight_decay: 0.001
+  group_balanced_sampling: true
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.0001
+  lr_reduce_factor: 0.5
+  lr_reduce_patience: 3
+  min_learning_rate: 0.0000001
+  # FP16 backward overflows in the encoder on this workload even after
+  # GradScaler reduces its scale. Use FP32 for stable training; the model
+  # and batch size remain unchanged.
+  amp: false
+  amp_init_scale: 16.0
+  amp_growth_interval: 2000
+  max_consecutive_nonfinite_gradients: 8
+  channels_last: true
+  cudnn_benchmark: true
+  checkpoint: null
+  output_dir: outputs/pretrain_b
+  freeze_encoder_epochs: 0
+
+wandb:
+  enabled: true
+  project: bridge-hole-layout
+  entity: null
+  run_name: null
+  mode: online
+  log_interval: 10
+
+decode:
+  mode: grid
+  candidate_multiplier: 50
+  min_score: 0.0
+  min_clearance: 0.0
+  boundary_tolerance: 4.0
+  enforce_class_bands: true
+  use_region_gate: true
+  class_bands:
+    top: [0.0, 0.40]
+    web: [0.40, 0.60]
+    bottom: [0.60, 1.0]
+
+geometry:
+  mirror_full_section: false
+  symmetry_axis_x: null
+  centerline_tolerance: 1.0

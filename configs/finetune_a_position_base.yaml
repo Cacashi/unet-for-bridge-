@@ -1,0 +1,20 @@
+base: finetune_a_from_ab.yaml
+data:
+  root: .
+  # The remote output1/a_finetune directory contains class labels; its
+  # combine previews are not used as a training inclusion gate.
+  require_combine: false
+  excluded_samples:
+    - "0_7_-51"
+    - "1_10_-35"
+    - "1_14_-24.25"
+    - "1_26_-35"
+    - "1_6_-51"
+    - "3_16_-71"
+  splits: artifacts/splits.json
+  feature_stats: artifacts/feature_stats.json
+  reuse_splits: true
+  reuse_feature_stats: true
+train:
+  checkpoint: outputs/pretrain_ab_domain_balanced/best.pt
+  early_stopping_patience: 0

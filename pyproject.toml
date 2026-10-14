@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bridge-hole-layout"
+version = "0.1.0"
+description = "Conditional U-Net + FiLM for bridge tendon hole layout prediction"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "torch>=2.7,<2.8",
+  "numpy>=1.23,<2.1",
+  "Pillow>=9.5",
+  "openpyxl>=3.1",
+  "opencv-python-headless>=4.8",
+  "PyYAML>=6.0",
+  "tqdm>=4.66",
+  "wandb>=0.17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100

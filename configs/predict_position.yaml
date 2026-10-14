@@ -1,0 +1,16 @@
+base: finetune_a_position_base.yaml
+data:
+  root: .
+prediction:
+  test_sample_counts:
+    zero: 2
+    nonzero: 4
+  test_selection_seed: 20261008
+  output_subdir: test_selected
+  position_models:
+    zero:
+      config: configs/finetune_a_zero.yaml
+      checkpoint: outputs/finetune_a_zero/best.pt
+    nonzero:
+      config: configs/finetune_a_nonzero.yaml
+      checkpoint: outputs/finetune_a_nonzero/best.pt

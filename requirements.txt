@@ -1,0 +1,8 @@
+torch>=2.7,<2.8
+numpy>=1.23,<2.1
+Pillow>=9.5
+openpyxl>=3.1
+opencv-python-headless>=4.8
+PyYAML>=6.0
+tqdm>=4.66
+wandb>=0.17

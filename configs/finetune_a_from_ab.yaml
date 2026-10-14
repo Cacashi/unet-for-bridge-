@@ -1,0 +1,18 @@
+base: base.yaml
+data:
+  workbook: data_finetune.xlsx
+  worksheet: data_finetune
+  input_dir: half-section/input1/a_finetune
+  output_dir: half-section/output1/a_finetune
+  manifest: artifacts/finetune_a_manifest.jsonl
+  splits: artifacts/finetune_a_splits.json
+  feature_stats: artifacts/finetune_a_feature_stats.json
+  exclude_invalid_geometry: false
+train:
+  stage: finetune_a_from_ab
+  domains: [A]
+  epochs: 40
+  learning_rate: 0.00001
+  checkpoint: outputs/pretrain_ab_domain_balanced/best.pt
+  output_dir: outputs/finetune_a_from_ab
+  freeze_encoder_epochs: 0

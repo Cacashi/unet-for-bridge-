@@ -1,0 +1,6 @@
+base: finetune_a_position_base.yaml
+data:
+  position_group: zero
+train:
+  stage: finetune_a_zero
+  output_dir: outputs/finetune_a_zero
